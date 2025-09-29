@@ -1,11 +1,24 @@
 /* General Body Styles */
-body { font-family: 'Lato', sans-serif; margin: 0; color: #333; background-color: #f9f9f9; font-size: 18px; line-height: 1.6; }
+body { 
+    font-family: 'Cormorant Garamond', serif; /* UPDATED FONT */
+    margin: 0; 
+    color: #333; 
+    background-color: #f9f9f9; 
+    font-size: 20px; /* Slightly increased for readability */
+    line-height: 1.7; 
+}
 html { scroll-behavior: smooth; }
 
 /* Header and Navigation */
 .site-header { background-color: #ffffff; border-bottom: 1px solid #e0e0e0; position: sticky; top: 0; width: 100%; z-index: 1000; }
 .header-container { display: flex; justify-content: space-between; align-items: center; padding: 20px 40px; max-width: 1800px; margin: 0 auto; }
-.site-title a { font-family: 'EB Garamond', serif; font-weight: 700; font-size: 24px; text-decoration: none; color: #000; }
+.site-title a { 
+    font-family: 'Cormorant Garamond', serif; /* UPDATED FONT */
+    font-weight: 700; 
+    font-size: 28px; /* Adjusted size */
+    text-decoration: none; 
+    color: #000; 
+}
 .main-nav ul { margin: 0; padding: 0; list-style: none; display: flex; }
 .main-nav li { margin: 0 15px; }
 .main-nav a { text-decoration: none; color: #555; font-weight: 400; transition: color 0.3s; padding: 5px 0; border-bottom: 2px solid transparent; }
@@ -19,14 +32,27 @@ main { min-height: 70vh; }
 section { padding: 80px 40px; border-bottom: 1px solid #e0e0e0; }
 section:last-child { border-bottom: none; }
 .content-wrapper { max-width: 900px; margin: 0 auto; }
-section h1, section h2 { font-family: 'EB Garamond', serif; font-weight: 700; font-size: 42px; margin-bottom: 30px; text-align: center;}
+section h1, section h2 { 
+    font-family: 'Cormorant Garamond', serif; /* UPDATED FONT */
+    font-weight: 700; 
+    font-size: 44px; /* Adjusted size */
+    margin-bottom: 30px; 
+    text-align: center;
+}
 section p, section ul { text-align: left; margin-bottom: 20px; }
 section ul { list-style-position: outside; padding-left: 20px; }
 section ul li { margin-bottom: 12px; }
 .subsection { margin-top: 40px; }
-.subsection h3 { font-family: 'EB Garamond', serif; font-size: 28px; margin-bottom: 15px; border-bottom: 1px solid #ccc; padding-bottom: 10px; }
+.subsection h3 { 
+    font-family: 'Cormorant Garamond', serif; /* UPDATED FONT */
+    font-size: 30px; /* Adjusted size */
+    font-weight: 700;
+    margin-bottom: 15px; 
+    border-bottom: 1px solid #ccc; 
+    padding-bottom: 10px; 
+}
 .hero-section { background: #e9e9e9; text-align: center; min-height: 50vh; display: flex; align-items: center; justify-content: center; }
-.hero-section h1 { font-size: 52px; }
+.hero-section h1 { font-size: 54px; /* Adjusted size */ }
 
 /* Footer */
 footer { background-color: #333; color: #fff; padding: 40px; text-align: center; }
@@ -45,3 +71,58 @@ footer { background-color: #333; color: #fff; padding: 40px; text-align: center;
     .mobile-menu-toggle.active .burger-icon span:nth-child(2) { opacity: 0; }
     .mobile-menu-toggle.active .burger-icon span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
 }
+/* --- New Hero Title Styles --- */
+.hero-title-container {
+    text-align: center;
+}
+
+.main-title {
+    font-size: 52px; /* Large size for the name */
+    line-height: 1.2;
+    margin-bottom: 10px;
+}
+
+.qualifications {
+    display: block; /* Puts qualifications on a new line */
+    font-size: 22px; /* Smaller font size */
+    font-weight: 400; /* Lighter font weight */
+    color: #555; /* Slightly muted color */
+}
+
+.subtitle {
+    font-size: 24px;
+    font-weight: 400;
+    color: #333;
+    letter-spacing: 2px; /* Adds space between letters */
+    text-align: center;
+    margin-top: 20px;
+}
+/* --- End of New Styles --- */
+
+/* --- New Hero Background Image Styles (Homepage Only) --- */
+
+/* By using #home, this rule now ONLY applies to the hero section on index.html */
+#home.hero-section {
+    /* The background is a layer of semi-transparent black on top of your image */
+    background: 
+        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+        url('assets/hero-background.jpg');
+    
+    background-size: cover;             /* Ensures the image covers the entire section */
+    background-position: center center; /* Centers the image */
+    background-attachment: fixed;       /* Creates a nice parallax effect on scroll */
+    
+    color: #ffffff; /* Sets the default text color in this section to white */
+}
+
+/* We also make these rules specific to the #home section */
+#home .main-title,
+#home .subtitle {
+    color: #ffffff;
+}
+
+#home .qualifications {
+    color: #dddddd; /* Makes the qualifications a slightly dimmer white */
+}
+
+/* --- End of New Styles --- */
