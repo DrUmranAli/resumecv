@@ -126,3 +126,82 @@ footer { background-color: #333; color: #fff; padding: 40px; text-align: center;
 }
 
 /* --- End of New Styles --- */
+
+/* --- Styles for About Page Layout --- */
+
+.about-container {
+    display: flex;
+    flex-wrap: wrap; /* Allows sidebar to stack on top on mobile */
+    gap: 3rem; /* Increased gap for better separation */
+    align-items: flex-start;
+}
+
+.about-sidebar {
+    flex: 0 0 240px; /* Sidebar with a fixed width */
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px; /* Optional: adds slightly rounded corners */
+    margin-bottom: 2rem;
+}
+
+.qualifications-list h3 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    color: #333; /* Slightly softer color for the subheading */
+}
+
+.qualifications-list ul {
+    list-style: none;
+    padding-left: 0;
+    font-size: 0.95rem; /* Slightly smaller font for the list */
+}
+
+.qualifications-list li {
+    margin-bottom: 0.75rem;
+    line-height: 1.5;
+}
+
+.about-text {
+    flex: 1; /* Allows text to take up all remaining space */
+}
+
+.about-text p:first-child {
+    margin-top: 0;
+}
+
+.signature-container {
+    margin-top: 2rem;
+    text-align: right; /* Aligns the signature to the right */
+}
+
+.signature-container img {
+    max-width: 450px; /* Adjust size as needed */
+    height: auto;
+}
+
+/* Responsive adjustment for smaller screens */
+@media (max-width: 900px) {
+    .about-sidebar {
+        flex-basis: 100%; /* Sidebar takes full width */
+        display: flex;
+        gap: 2rem;
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-sidebar {
+       display: block; /* Stack image and qualifications vertically */
+    }
+
+    .about-image {
+        text-align: center; /* Center the image */
+    }
+
+    .about-image img {
+        max-width: 200px; /* Control image size on mobile */
+    }
+}
