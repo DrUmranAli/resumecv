@@ -260,7 +260,7 @@ footer { background-color: #333; color: #fff; padding: 40px; text-align: center;
         display: block;
         width: 100%;
         padding: 1.2rem 1rem;     /* <<< FIX #2: Increased padding for a larger tap area */
-        font-size: 1.8rem;       /* <<< FIX #3: Significantly larger font size */
+        font-size: 3.8rem;       /* <<< FIX #3: Significantly larger font size */
         font-weight: 600;        /* Bolder for better readability */
         color: #1c1c1c;
         border-bottom: 1px solid #f0f0f0;
