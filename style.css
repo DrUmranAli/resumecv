@@ -205,3 +205,65 @@ footer { background-color: #333; color: #fff; padding: 40px; text-align: center;
         max-width: 200px; /* Control image size on mobile */
     }
 }
+/* --- Simple Mobile Dropdown Menu Styles --- */
+
+/* Apply these styles only on screens 992px wide or smaller */
+@media (max-width: 992px) {
+
+    /* 1. Position the header to act as an anchor for the dropdown */
+    .site-header {
+        position: relative; /* This is important for the dropdown positioning */
+    }
+
+    /* 2. Hide the main navigation and social links by default on mobile */
+    .main-nav {
+        display: none; /* Hide the menu until it's active */
+        position: absolute; /* Position it relative to the header */
+        top: 100%; /* Place it directly below the header */
+        left: 0;
+        width: 100%;
+        background-color: #ffffff; /* Give it a solid white background */
+        border-bottom: 1px solid #e0e0e0;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.05); /* Add a subtle shadow */
+        z-index: 100;
+    }
+
+    .social-links {
+        display: none; /* Hide social links to save space */
+    }
+
+    /* 3. When the menu is toggled active, display it as a dropdown block */
+    .main-nav.active {
+        display: block;
+    }
+
+    /* 4. Stack the menu items vertically instead of horizontally */
+    .main-nav ul {
+        flex-direction: column;
+        padding: 0.5rem 0; /* Add some padding to the top and bottom of the list */
+    }
+
+    .main-nav li {
+        width: 100%;
+        text-align: center; /* Center the menu text */
+    }
+
+    /* 5. Make the links large, bold, and easy to tap */
+    .main-nav a {
+        display: block; /* Make the entire area of the link tappable */
+        padding: 1rem; /* <<< GENEROUS PADDING for easy tapping */
+        font-size: 1.2rem; /* <<< LARGER FONT SIZE for readability */
+        font-weight: 600;
+        color: #333;
+        border-top: 1px solid #f0f0f0; /* Add a subtle separator line */
+    }
+    
+    .main-nav li:first-child a {
+        border-top: none; /* Remove the line above the first item */
+    }
+
+    /* 6. Ensure the burger menu icon is always visible on mobile */
+    .mobile-menu-toggle {
+        display: block; /* Show the burger icon */
+    }
+}
